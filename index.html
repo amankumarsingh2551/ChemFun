@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="manifest" href="manifest.json">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChemFun - Interactive Bohr Simulator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loader">
+
+⚛ Loading ChemFun...
+
+</div>
+<input
+id="searchBox"
+list="elementSuggestions"
+type="text"
+placeholder="Search element...">
+
+<datalist id="elementSuggestions">
+
+</datalist>
+
+<header>
+    <h1>⚛ ChemFun</h1>
+    <p>Interactive Bohr Atomic Model Simulator</p>
+
+    <button id="darkModeBtn">
+        🌙 Dark Mode
+    </button>
+</header>
+
+<nav>
+
+    <button class="tab active" data-page="home">
+        Home
+    </button>
+
+    <button class="tab" data-page="bohr">
+        Bohr Model
+    </button>
+
+    <button class="tab" data-page="calculator">
+        Calculators
+    </button>
+
+    <button class="tab" data-page="periodic">
+        Periodic Table
+    </button>
+
+    <button class="tab" data-page="quiz">
+        Quiz
+    </button>
+
+</nav>
+
+<!-- HOME -->
+ <div class="card">
+
+<h3>🧪 Chemistry Fact</h3>
+
+<p id="fact">
+
+Loading fact...
+
+</p>
+
+</div>
+
+<section id="home" class="page active">
+
+<h2>Welcome to ChemFun</h2>
+
+<p>
+Learn Chemistry in a fun and interactive way.
+</p>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>⚛ Animated Atoms</h3>
+
+<p>
+Visualize electrons orbiting the nucleus.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🔬 Search Elements</h3>
+
+<p>
+Find any element by name, symbol or atomic number.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🧮 Bohr Calculators</h3>
+
+<p>
+Radius, Energy, Velocity, Frequency and Spectral Lines.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>📖 Learn Chemistry</h3>
+
+<p>
+Perfect for students from middle school to college.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- BOHR MODEL -->
+
+<section id="bohr" class="page">
+
+<h2>Bohr Atomic Model</h2>
+
+<input
+id="searchBox"
+type="text"
+placeholder="Enter Element Name or Symbol">
+
+<button id="searchButton">
+
+Show Atom
+
+</button>
+
+<div id="elementCard">
+
+<h3>Element Details</h3>
+<p><b>Name:</b> <span id="name"></span></p>
+
+<p><b>Symbol:</b> <span id="symbol"></span></p>
+
+<p><b>Atomic Number:</b> <span id="atomicNumber"></span></p>
+
+<p><b>Atomic Mass:</b> <span id="mass"></span></p>
+
+<p><b>Electron Configuration:</b> <span id="configuration"></span></p>
+
+<b>Protons:</b>
+<span id="protons"></span>
+</p>
+
+
+<p>
+<b>Neutrons:</b>
+<span id="neutrons"></span>
+</p>
+
+
+<p>
+<b>Electrons:</b>
+<span id="electrons"></span>
+</p>
+
+
+<p>
+<b>Valency:</b>
+<span id="valency"></span>
+</p>
+</div>
+
+<div class="atom">
+
+<div id="nucleus">
+
+Nucleus
+
+</div>
+
+<div id="shellContainer">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CALCULATORS -->
+
+<section id="calculator" class="page">
+
+<h2>Bohr Calculators</h2>
+
+<div class="calculator">
+
+<h3>Bohr Radius</h3>
+
+<input id="radiusInput"
+type="number"
+placeholder="Energy Level">
+
+<button id="radiusButton">
+
+Calculate
+
+</button>
+
+<p id="radiusResult"></p>
+
+</div>
+
+<div class="calculator">
+
+<h3>Energy Calculator</h3>
+
+<input id="energyInput"
+type="number"
+placeholder="Energy Level">
+
+<button id="energyButton">
+
+Calculate
+
+</button>
+
+<p id="energyResult"></p>
+
+</div>
+
+<div class="calculator">
+
+<h3>🌈 Advanced Spectral Calculator</h3>
+
+
+<input id="n1"
+type="number"
+placeholder="Lower Energy Level">
+
+
+<input id="n2"
+type="number"
+placeholder="Higher Energy Level">
+
+
+<button id="spectralButton">
+
+Calculate Spectrum
+
+</button>
+
+
+<p id="spectralResult"></p>
+
+<p id="photonEnergy"></p>
+
+<p id="frequency"></p>
+
+<p id="series"></p>
+
+
+</div>
+
+</section>
+
+<!-- PERIODIC TABLE -->
+
+<section id="periodic" class="page">
+
+<h2>Interactive Periodic Table</h2>
+
+
+</div>
+
+</section>
+
+<!-- QUIZ -->
+
+<section id="quiz" class="page">
+
+<h2>Chemistry Quiz</h2>
+
+<div id="quizBox">
+
+<h3 id="question">
+Question will appear here
+</h3>
+
+
+<div id="answers">
+
+</div>
+
+
+<p id="score">
+Score: 0
+</p>
+
+
+<button id="nextQuestion">
+
+Next Question
+
+</button>
+
+
+<p id="feedback">
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 ChemFun
+
+</p>
+
+</footer>
+
+<script src="elements.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

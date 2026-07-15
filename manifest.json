@@ -1,0 +1,19 @@
+{
+    "name": "ChemFun - Atomic Simulator",
+    "short_name": "ChemFun",
+    "description": "Interactive Bohr Atomic Model and Chemistry Learning App",
+
+    "start_url": "index.html",
+
+    "display": "standalone",
+
+    "background_color": "#0066ff",
+
+    "theme_color": "#0066ff",
+
+    "icons": [
+        {
+            
+        }
+    ]
+}
